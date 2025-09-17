@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'ro.mpp2025'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'ro.mpp2025.StartRpcServer'
+}
+
+
+dependencies {
+    implementation project(':Model')
+    implementation project(':Services')
+    implementation project(':Persistence')
+    implementation project(':Networking')
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'com.sun.mail:javax.mail:1.6.2'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.0'
+    implementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+    implementation 'org.hibernate.orm:hibernate-community-dialects:6.4.4.Final'
+    implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.1'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:4.0.4'
+    implementation 'org.glassfish.jaxb:txw2:4.0.4'
+    implementation 'com.sun.istack:istack-commons-runtime:4.2.0'
+    implementation 'com.sun.xml.fastinfoset:FastInfoset:2.1.1'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="771.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mpp2025.gui.BugsController">
+   <children>
+      <TableView fx:id="newBugsTable" layoutX="14.0" layoutY="34.0" prefHeight="351.0" prefWidth="175.0" style="-fx-border-color: blue; -fx-background-color: cyan;">
+        <columns>
+          <TableColumn fx:id="nameNewColumn" prefWidth="80.66665649414062" text="Name" />
+          <TableColumn fx:id="statusNewColumn" prefWidth="91.33334350585938" text="Status" />
+        </columns>
+      </TableView>
+      <TableView fx:id="progressBugsTable" layoutX="214.0" layoutY="34.0" prefHeight="351.0" prefWidth="198.0" style="-fx-border-color: green; -fx-background-color: #00FF00;">
+        <columns>
+          <TableColumn fx:id="nameProgressColumn" prefWidth="93.3333740234375" text="Name" />
+          <TableColumn fx:id="progressStatusColumn" prefWidth="101.99993896484375" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="70.0" layoutY="14.0" text="New Bugs">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="256.0" layoutY="14.0" text="In Progress Bugs">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="addButton" layoutX="97.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleAdd" style="-fx-border-color: black; -fx-background-color: white;" text="Add" />
+      <TableView fx:id="solvedBugsTable" layoutX="441.0" layoutY="34.0" prefHeight="351.0" prefWidth="212.0" style="-fx-border-color: purple; -fx-background-color: pink;">
+        <columns>
+          <TableColumn fx:id="solvedNameColumn" prefWidth="104.66659545898438" text="Name" />
+          <TableColumn fx:id="solvedStatusColumn" prefWidth="104.66668701171875" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="515.0" layoutY="14.0" text="Solved Bugs">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="updateButton" layoutX="186.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleUpdate" style="-fx-background-color: white; -fx-border-color: black;" text="Update" />
+      <Button fx:id="deleteButton" layoutX="300.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleDelete" style="-fx-background-color: white; -fx-border-color: black;" text="Delete" />
+      <Label layoutX="21.0" layoutY="409.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="438.0" text="Description:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="21.0" layoutY="466.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="nameField" layoutX="65.0" layoutY="405.0" />
+      <TextField fx:id="descriptionField" layoutX="88.0" layoutY="434.0" />
+      <DatePicker fx:id="datePickerField" layoutX="65.0" layoutY="463.0" />
+      <TextField fx:id="testerField" layoutX="383.0" layoutY="405.0" />
+      <Label layoutX="292.0" layoutY="409.0" text="Tester email:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="292.0" layoutY="438.0" text="Programmer email:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="programmerField" layoutX="415.0" layoutY="434.0" />
+      <Button fx:id="logoutButton" layoutX="681.0" layoutY="593.0" mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: white; -fx-border-color: black;" text="Logout" />
+      <Button fx:id="solvedButton" layoutX="406.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleSolved" style="-fx-background-color: white; -fx-border-color: black;" text="Solved" />
+   </children>
+</AnchorPane>

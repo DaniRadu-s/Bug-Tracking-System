@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgb(144, 238, 144);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mpp2025.gui.UsersController">
+   <children>
+      <TableView fx:id="testerTable" layoutX="33.0" layoutY="27.0" prefHeight="348.0" prefWidth="153.0">
+        <columns>
+          <TableColumn fx:id="testerEmailColumn" prefWidth="75.0" text="Email" />
+          <TableColumn fx:id="testerUsernameColumn" prefWidth="75.0" text="Username" />
+        </columns>
+      </TableView>
+      <TableView fx:id="programmerTable" layoutX="200.0" layoutY="27.0" prefHeight="348.0" prefWidth="153.0">
+        <columns>
+          <TableColumn fx:id="programmerEmailColumn" prefWidth="75.0" text="Email" />
+          <TableColumn fx:id="programmerUsernameColumn" prefWidth="75.0" text="Username" />
+        </columns>
+      </TableView>
+      <Button fx:id="addButton" layoutX="375.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleAdd" text="Add" />
+      <Button fx:id="updateButton" layoutX="452.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleUpdate" text="Update" />
+      <Button fx:id="deleteButton" layoutX="534.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleDelete" text="Delete" />
+      <Label layoutX="91.0" layoutY="5.0" text="Testers" />
+      <Label layoutX="241.0" layoutY="5.0" text="Programmers" />
+      <Label layoutX="362.0" layoutY="117.0" text="Email:" />
+      <Label layoutX="363.0" layoutY="165.0" text="Username:" />
+      <Label layoutX="362.0" layoutY="209.0" text="Password:" />
+      <Label layoutX="361.0" layoutY="258.0" text="Name:" />
+      <TextField fx:id="emailField" layoutX="420.0" layoutY="113.0" />
+      <TextField fx:id="usernameField" layoutX="433.0" layoutY="161.0" />
+      <TextField fx:id="passwordField" layoutX="433.0" layoutY="205.0" />
+      <TextField fx:id="nameField" layoutX="405.0" layoutY="254.0" />
+      <CheckBox fx:id="testerCheck" layoutX="369.0" layoutY="313.0" mnemonicParsing="false" text="Tester" />
+      <CheckBox fx:id="programmerCheck" layoutX="498.0" layoutY="313.0" mnemonicParsing="false" text="Programmer" />
+   </children>
+</AnchorPane>

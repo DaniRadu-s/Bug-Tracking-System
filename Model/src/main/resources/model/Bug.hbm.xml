@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ro.mpp2025.domain">
+
+    <class name="Bug" table="Bugs">
+        <id name="id" type="java.lang.Long" column="id_bug">
+            <generator class="increment"/>
+        </id>
+        <property name="name" type="string" column="name" />
+        <property name="description" type="string" column="description" />
+        <many-to-one name="tester" class="ro.mpp2025.domain.Tester" column="tester_id" fetch="select"/>
+        <many-to-one name="programmer" class="ro.mpp2025.domain.Programmer" column="programmer_id" fetch="select"/>
+        <property name="status" type="BugStatus" column="status" />
+        <property name="date" type="timestamp" column="date" />
+    </class>
+
+</hibernate-mapping>

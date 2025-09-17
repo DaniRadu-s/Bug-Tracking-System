@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="791.0" stylesheets="@style/login.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mpp2025.gui.LoginController">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="50.0" styleClass="grey-color" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FC25 Bug System" wrappingWidth="223.4088134765625" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial" size="24.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="200.0" prefHeight="395.0" prefWidth="791.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Text>
+                        <GridPane alignment="CENTER" VBox.vgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <VBox.margin>
+                              <Insets bottom="50.0" top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="emailField" GridPane.columnIndex="1" />
+                              <CheckBox fx:id="programmerCheck" mnemonicParsing="false" text="Programmer" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="testerCheck" mnemonicParsing="false" prefHeight="23.0" prefWidth="229.0" text="Tester" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="adminCheck" mnemonicParsing="false" prefHeight="23.0" prefWidth="229.0" text="Admin" textFill="WHITE" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </CheckBox>
+                              <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </GridPane>
+                        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" prefHeight="28.0" prefWidth="64.0" text="Login" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleClose" text="Exit" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

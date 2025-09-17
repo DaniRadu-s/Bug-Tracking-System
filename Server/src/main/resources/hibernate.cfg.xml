@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="jakarta.persistence.jdbc.driver">org.postgresql.Driver</property>
+        <property name="jakarta.persistence.jdbc.url">jdbc:postgresql://localhost:5432/BugProblem</property>
+        <property name="jakarta.persistence.jdbc.user">postgres</property>
+        <property name="jakarta.persistence.jdbc.password">Dani</property>
+        <property name="jakarta.persistence.schema-generation.database.action">update</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!--<mapping resource="model/Tester.hbm.xml"/> -->
+        <mapping class="ro.mpp2025.domain.Tester"/>
+        <!-- <mapping resource="model/Programmer.hbm.xml"/> -->
+        <mapping class="ro.mpp2025.domain.Programmer"/>
+        <!-- <mapping resource="model/Bug.hbm.xml"/> -->
+        <mapping class="ro.mpp2025.domain.Bug"/>
+        <mapping class="ro.mpp2025.domain.Admin"/>
+
+    </session-factory>
+</hibernate-configuration>
